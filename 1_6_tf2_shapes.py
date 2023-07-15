@@ -25,6 +25,6 @@ print('any_tuple1: ',any_tuple1)
 
 any_list2 = [7,None]
 any_list3 = [7,None,None]
-print('any_list2: ',any_list1)
-print('any_list3: ',any_tuple1)
+print('any_list2: ',any_list2)
+print('any_list3: ',any_list3)
 
