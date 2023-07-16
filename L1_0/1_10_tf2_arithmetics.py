@@ -7,9 +7,9 @@ def compute_values():
     c = tf.multiply (a, 3)
     d = tf.math.divide(a, 6)
 
-    tf.print(a)
-    tf.print(b)
-    tf.print(c)
-    tf.print(d)
+    print(a)
+    print(b)
+    print(c)
+    print(d)
 
 compute_values()
