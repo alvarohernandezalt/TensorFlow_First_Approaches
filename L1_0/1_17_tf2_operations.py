@@ -17,3 +17,10 @@ print("")
 print("tf.square(x): ", tf.square(x))
 print("")
 print("x @ tf.transpose(x): ", x @ tf.transpose(x))
+
+m1 = tf.constant([[1.,2.,4.],[3.,6.,12.]])
+print("m1:            ", m1)
+print("m1 + 50:       ", m1 + 50)
+print("m1 * 2:        ", m1 * 2)
+print("tf.square(m1): ", tf.square(m1))
+
