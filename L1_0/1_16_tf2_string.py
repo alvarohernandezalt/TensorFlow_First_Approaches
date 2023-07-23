@@ -12,3 +12,15 @@ print("len1: ",len1.numpy())
 print("len1: ",len2.numpy())
 print("")
 
+# string arrays
+x2 = tf.constant(['Cafe', 'coffe', 'kaffe', 'taza'])
+print('x2: ', x2)
+print("")
+
+len3 = tf.strings.length(x2, unit="UTF8_CHAR")
+print('len2: ', len3.numpy())
+print("")
+
+r = tf.strings.unicode_decode(x2, "UTF8")
+print("r: ", r)
+
