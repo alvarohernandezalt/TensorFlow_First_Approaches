@@ -4,9 +4,9 @@ arr2 = tf.constant([[1,2],[2,3]])
 
 @tf.function
 def compute_values():
-    print('arr2: ',arr2)
+    tf.print('arr2: ',arr2)
     arr_0 = arr2[0]
-    print('[0]: ',arr_0)
-    print('[1]: ',arr2[1].numpy())
+    tf.print('[0]: ',arr_0)
+    print('[1]: ',arr2[1]) # Inside def, normal print in "eager" mode is always the abstraction of the tensor as result
 
 compute_values()
