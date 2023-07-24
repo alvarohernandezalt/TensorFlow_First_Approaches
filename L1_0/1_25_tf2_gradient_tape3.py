@@ -1,4 +1,6 @@
 # Using nested Loops with tf.GradientTape
+# We use two examples: first with a constant tensor
+# Second with a Variable tensor
 
 import tensorflow as tf 
 
