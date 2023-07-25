@@ -8,3 +8,4 @@ b = tf.Variable([10,20,30,40,50,60], name='t')
 
 print('w: ', w)
 print('b: ', tf.reduce_mean(input_tensor=b))
+print('w_mean: ', tf.reduce_mean(input_tensor=w))
