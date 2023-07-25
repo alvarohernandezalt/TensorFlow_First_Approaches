@@ -4,4 +4,4 @@ import tensorflow as tf
 values = {'weights':tf.Variable(tf.random.normal([6,3,4]))}
 
 print('values:')
-print(values['weights'])
+print(values['weights'].numpy())
