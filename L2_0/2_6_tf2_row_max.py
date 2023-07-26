@@ -4,7 +4,7 @@ import tensorflow as tf
 a = [[1,2,3],[30,20,10],[40,60,50]]
 b = tf.Variable(a, name='b')
 
-print('b: ', tf.argmax(b,1))
+print('b: ', tf.argmax(b,0)) # 1 for rows 0 for columns
 
 # tf.argmax determines the inddex values containing the maximun
 # values on a row-wise basis or on a column-wise basis
