@@ -15,10 +15,11 @@ y  =   np.array([[31, 23,  4, 24, 27, 14],
                  [16,  1, 26, 32,  2, 29],
                  [17, 12,  5, 11, 10, 15]])
 
-prediction = tf.equal((tf.argmax(input=pred, axis=1), tf.argmax(input=y, axis=1)))
+prediction = tf.equal(tf.argmax(input=pred, axis=1), tf.argmax(input=y, axis=1))
+
 
 accuracy = tf.reduce_mean(input_tensor=tf.cast(prediction, tf.float32))
 
-print('predcition: ',prediction)
+print('prediction: ',prediction)
 print('accuracy: ', accuracy)
 
