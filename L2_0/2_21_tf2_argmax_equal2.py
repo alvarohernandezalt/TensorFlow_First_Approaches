@@ -9,7 +9,14 @@ pred = np.array ([[0.1, 0.03, 0.2, 0.05, 0.02, 0.6],
 # true values from our labeled data:
 y_vals = np.array ([[0,  0,  0,  0,  0,  1],
                     [1,  0,  0,  0,  0,  0],
-                    [0,  0,  1,  0,  0,  0]]])
+                    [0,  0,  1,  0,  0,  0]])
 
 print('argmax(pred,1): ', tf.argmax(input=pred, axis=1))
 print('argmax(y_vals,1): ', tf.argmax(input=y_vals, axis=1))
+
+prediction = tf.equal(tf.argmax(input=pred, axis=1),tf.argmax(input=y_vals, axis=1))
+
+accuracy = tf.reduce_mean(input_tensor=tf.cast(prediction,tf.float32))
+
+print('prediction: ', prediction)
+print('accuracy: ', accuracy)
