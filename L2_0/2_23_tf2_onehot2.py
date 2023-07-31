@@ -5,8 +5,8 @@ target = tf.one_hot(idx, 3, 2, 0)
 
 @tf.function
 def compute_values():
-    tf.print(idx)
-    tf.print(target)
+    print(idx)
+    print(target)
 
 compute_values()
 
