@@ -1,7 +1,10 @@
+####NOT WORKING: NEED TO FIGURE OUT WHY IS GIVING ERROR WHEN CREATING ckpt
+
+
 import tensorflow as tf
 import os
 
-checkpoint_dir = 'C:/Users/ÁlvaroHernández/Documents/GitHub/TensorFlow_First_Approaches/L2_0/ckpt'
+checkpoint_dir = 'C:/Users/ÁlvaroHernández/Documents/GitHub/TensorFlow_First_Approaches/L2_0/'
 os.makedirs(checkpoint_dir, exist_ok=True)
 checkpoint_path = os.path.join(checkpoint_dir,'ckpt')
 
