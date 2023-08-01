@@ -9,3 +9,6 @@ simple1 = tf.train.Example(features=tf.train.Feature(
     }
 ))
 
+print('my_ints: ', simple1.features.feature['my_ints'], int64_list.value)
+print('my_float: ', simple1.features.feature['my_float'], float_list.value)
+print('my_bytes: ', simple1.features.feature['my_bytes'], bytes_list.value)
