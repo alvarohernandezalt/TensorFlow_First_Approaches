@@ -3,11 +3,11 @@ import tensorflow as tf
 # Set random seed for testing the same data
 tf.random.set_seed(37)
 
-ds1 =  tf.data.Dataset.from_tensors_slices(
-    [tf.random_uniform([3,2]), tf.random.uniform([3])])
+ds1 =  tf.data.Dataset.from_tensor_slices(
+    (tf.random.uniform([3,2]), tf.random.uniform([3])))
 
 ds2 =  tf.data.Dataset.from_tensors(
-    [tf.random_uniform([3,2]), tf.random.uniform([3])])
+    (tf.random.uniform([3,2]), tf.random.uniform([3])))
 
 print('---------------------------------------')
 for i, item in enumerate(ds1):
