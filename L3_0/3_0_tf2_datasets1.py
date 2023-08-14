@@ -11,10 +11,10 @@ ds2 =  tf.data.Dataset.from_tensors(
 
 print('---------------------------------------')
 for i, item in enumerate(ds1):
-    print('elem1: ' + str(i +1), item[0], intem[1])
+    print('elem1: ' + str(i +1), item[0], item[1])
 
 print('---------------------------------------')
 for i, item in enumerate(ds2):
-    print('elem1: ' + str(i +1), item[0], intem[1])
+    print('elem1: ' + str(i +1), item[0], item[1])
 
 print('---------------------------------------')
