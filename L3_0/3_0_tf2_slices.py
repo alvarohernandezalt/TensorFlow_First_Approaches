@@ -2,7 +2,7 @@ import tensorflow as tf
 
 # combine the input into one element
 t1 = tf.constant([[1, 2],[3, 4]])
-ds1 = tf.data.Dataset.from _tensors(t1)
+ds1 = tf.data.Dataset.from_tensors(t1)
 
 # separate element for each item
 t2 = tf.constant([[1, 2],[3, 4]])
