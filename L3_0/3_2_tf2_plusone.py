@@ -14,4 +14,4 @@ for value in ds:
     print('1value: ',value)
 
 for value in ds.take(2*len(x)):
-    print('2value: ', value)
+    print('2value: ', value.numpy())
