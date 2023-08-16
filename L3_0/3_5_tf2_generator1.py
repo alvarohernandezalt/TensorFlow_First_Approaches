@@ -14,7 +14,10 @@ def gener():
     for i in x:
         yield (3*i)
 
-ds = tf.data.Datset.from_generator(gener, (tf.int64))
+ds = tf.data.Dataset.from_generator(gener, (tf.int64))
 
 for value in ds.take(len(x)):
+    print('value: ',value)
+
+for value in ds.take(2*len(x)):
     print('value: ',value)
