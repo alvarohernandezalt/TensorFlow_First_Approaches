@@ -9,7 +9,7 @@ that emits a value of type tf.int64
 import tensorflow as tf 
 import numpy as np 
 
-x= arange(0,10)
+x= np.arange(0,10)
 def gener():
     for i in x:
         yield (3*i)
