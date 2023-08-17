@@ -8,4 +8,8 @@ y = np.arange(1,11)
 dx = tf.data.Dataset.from_tensor_slices(x) 
 dy = tf.data.Dataset.from_tensor_slices(y)
 
-zip the two datasets together
+# zip the two datasets together
+d2 = tf.data.Dataset.zip((dx,dy)).batch(3)
+
+for value in d2.take(8):
+    print('value: ',value)
