@@ -9,7 +9,7 @@ def gener():
         yield (i, i+1, i+2)
         i += 3
 
-ds = data.Dataset.from_generator(gener, (tf.int64, tf.int64, tf.int64))
+ds = tf.data.Dataset.from_generator(gener, (tf.int64, tf.int64, tf.int64))
 
 third = int(len(x)/3)
 for value in ds.take(third):
