@@ -20,6 +20,7 @@ dataset = tf.data.Dataset.from_tensor_slices(x)
 
 # 👉👉 METHOD #3: THE SHORTEST WAY (THE BOOK DON'T SAY ABOUT IT)
 # Just doing some simple math inside the lambda expession
+# Using parenthesis to order the expressions above into a single one
 dataset2 = dataset.map(lambda x: ((2*x)+1)**3)
 
 # testing and comparing that they are the same values
