@@ -16,11 +16,13 @@ dataset = tf.data.Dataset.from_tensor_slices(x)
 # dataset = dataset.map(lambda x: x**3)
 
 # METHOD #2: THE SHORT WAY
-dataset = dataset.map(lambda x: X*2).map(lambda x: x+1).map(lambda x: x**3)
+dataset = dataset.map(lambda x: x*2).map(lambda x: x+1).map(lambda x: x**3)
 
 # METHOD #3: THE SHORTEST WAY (THE BOOK DON'T SAY ABOUT IT)
+# Just doing some simple math inside the lambda expession
 dataset2 = dataset.map(lambda x: ((2*x)+1)**3)
 
+# testing and comparing that they are the same values
 for values in dataset:
     print('values: ', values)
 
