@@ -6,3 +6,5 @@ x_data = np.linspace(-1, 1, 11)
 # Create some perturbance in the y pairs for real regression model
 y_data = 4*x_data + np.random.randn(*x_data.shape)*0.5
 
+plt.scatter(x_data, y_data)
+plt.show()
