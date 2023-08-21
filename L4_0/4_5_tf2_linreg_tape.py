@@ -26,3 +26,29 @@ def squared_error(y_pred, y_true):
 
 loss = squared_error(predict_y_value(x_train), y_train)
 print('Initial loss: ', loss.numpy())
+
+######################################
+# backward error propagation requires: 
+# a loss function (squared_error) 
+# an optimizer (tape.gradient) 
+# a value for the learning rate 
+######################################
+
+learning_rate = 0.05
+steps = 200
+
+for i in range(steps):
+    with tf.GradientTape() as tape:
+        predictions = predict_y_value(x_train)
+        loss = squared_error(predictions, y_train)
+    
+    gradients = tape.gradient(loss, [m, b])
+
+    m.assign_sub(gradients[0] * learning_rate)
+    b.assign_sub(gradients[1] * learning_rate)
+
+    if( i % step) == 0:
+        print("Step %d, Loss %f" % (i, loss.numpy()))
+
+# Display trained values for slope m and bias b
+print ("m: %f, b: %f" % (m.numpy(), b.numpy())) 
