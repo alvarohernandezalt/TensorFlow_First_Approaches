@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # price of pasta per kilogram
-df = pd.read_csv('4_7_pasta.csv')
+df = pd.read_csv('4_7_pasta.csv', index_col=0)
 
 weight = df['weight']
 price = df['price']
